@@ -1,12 +1,14 @@
-#  JANGAN DIPERJUAL BELIKAN!
+#  jangan diperjual belikan!
 SC FREE 
 
 
 
-#    PERINTAH
+#   perintah
 
 $ git clone https://github.com/HAFIZDXD/CR4CK
 
-$ls
+$ ls
+
+$python Premium.py
 
 
