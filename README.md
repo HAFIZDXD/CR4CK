@@ -1,2 +1,6 @@
-# CR4CK
-Sebuah tools untuk Cr4ck akun facebook
+#  JANGAN DIPERJUAL BELIKAN!
+SC FREE 
+
+
+
+#PERINTAH
