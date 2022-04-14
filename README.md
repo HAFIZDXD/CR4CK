@@ -3,4 +3,10 @@ SC FREE
 
 
 
-#PERINTAH
+#    PERINTAH
+
+$ git clone https://github.com/HAFIZDXD/CR4CK
+
+$ls
+
+
