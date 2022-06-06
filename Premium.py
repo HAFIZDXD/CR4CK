@@ -38,6 +38,12 @@ u = '\033[95m' # UNGU
 kk = '\033[33m' # KUNING -
 b = '\33[1;96m' # BIRU -
 p = '\x1b[0;34m' # BIRU +
+Y = '\033[93;1m'
+print('\033[93;1mSCRIPT SEDANG TIDAK ADA HASIL JADI SEMENTARA WAKTU SCRIPT DI TUTUP HINGGA FACEBOOK NORMAL \033[0m')
+
+
+
+
 # Converter Bulan
 dic = {'1':'Januari','2':'Februari','3':'Maret','4':'April','5':'Mei','6':'Juni','7':'Juli','8':'Agustus','9':'September','10':'Oktober','11':'November','12':'Desember'}
 dic2 = {'01':'Januari','02':'Februari','03':'Maret','04':'April','05':'Mei','06':'Juni','07':'Juli','08':'Agustus','09':'September','10':'Oktober','11':'November','12':'Desember'}
