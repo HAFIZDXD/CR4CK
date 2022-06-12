@@ -157,8 +157,17 @@ def login():
 	else:lisensi()
 
 # LOGIN
-cik2=mark(cik ,style='cyan')
-			
+def login_lagi334():
+	banner()
+	sky = '[bold cyan][01] LOGIN COOKIE V1\n[02] LOGIN COOKIE V2[/bold cyan]'
+	sky2 = nel(sky, style='cyan')
+	cetak(nel(sky2,title='[bold cyan] • LOGINNYA BUKAN DISINI NGENTOD LOGINNYA DI (login.py) • [/bold cyan]'))
+	pil=input('[•] Choose : ')
+	if pil in ['1','01']:
+		try:
+			cik='# LOGIN USING COOKIE V1'
+			cik2=mark(cik ,style='cyan')
+			sol().print(cik2)
 			cooki=input("Cookie : ")
 			open('.cookie.txt','w').write(cooki)
 			data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 11; Realme 3 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.128 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cooki}) 
@@ -175,6 +184,30 @@ cik2=mark(cik ,style='cyan')
 		except Exception as e: 
 			os.system("rm -f .token.txt")
 			os.system("rm -rf .cookie.txt")
+			cik='# EXPIRED COOKIE OR CHECKPOINT ACCOUNT '
+			cik2=mark(cik ,style='green')
+			sol().print(cik2) 
+			exit()
+	elif pil in ['2','02']:
+		try:
+			cik='# LOGIN USING COOKIE V2 '
+			cik2=mark(cik ,style='cyan')
+			sol().print(cik2)
+			cookie=input("[•] Cookie : ")
+			headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0'}
+			ses=requests.Session()
+			req = ses.get('https://web.facebook.com/adsmanager?_rdc=1&_rdr', headers = headers,cookies={'cookie': cookie})
+			cari_id = re.findall('act=(.*?)&nav_source', req.text)
+			for bn in cari_id:
+				rex = ses.get(f'https://web.facebook.com/adsmanager/manage/campaigns?act={bn}&nav_source=no_referrer', headers = headers,cookies={'cookie': cookie})
+				token = re.search('(EAAB\w+)', rex.text).group(1)
+				ken=open(".token.txt", "w").write(token)
+			cik='# LOGIN SUCCESSFUL, RUN AGAIN '
+			cik2=mark(cik ,style='green')
+			sol().print(cik2)
+			exit()
+		except Exception as e: 
+			os.system("rm -f .token.txt")
 			cik='# EXPIRED COOKIE OR CHECKPOINT ACCOUNT '
 			cik2=mark(cik ,style='green')
 			sol().print(cik2) 
