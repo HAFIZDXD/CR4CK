@@ -154,7 +154,6 @@ def login():
 				exit()
 		except IOError:
 			login_lagi334()
-	else:lisensi()
 
 # LOGIN
 def login_lagi334():
